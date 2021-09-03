@@ -1,0 +1,25 @@
+* =iλ= (Imaginary Programming Functions)
+
+This project contains basic libraries with a
+basic set of functions for doing imaginary
+programming in a variety of programming
+languages.
+
+** Syntax forms
+| name             | type     | depends on           | basic idea                                                                                                     |
+|------------------+----------+----------------------+----------------------------------------------------------------------------------------------------------------|
+| =ieval=          | MACRO    |                      | =ieval= will imagine the evaluation of some code without any other context.                                    |
+| =imacro=         | MACRO    |                      | =imacro= does not evaluate. It merely generates code, but is like =idefun=.                                    |
+| =idefun=         | FUNCTION | =ieval= and =imacro= | Run an expression on the given arguments and return an imagined result, but create a binding for the function. |
+| =ilist=          | FUNCTION |                      | Generate a list of things. Return a real list.                                                                 |
+| =ilambda= / =iλ= | FUNCTION |                      | Imaginarily run an expression on the given arguments and return an imagined result.                            |
+| =ifilter=        | FUNCTION |                      | Imaginarily filter a real list with natural language and return a real list. Optionally, enforce cardinality.  |
+| =iparse=         | MACRO    |                      | Given a syntax form / expression, will parse a syntax form with natural language. Returns the subform.         |
+
+** Status
+| Language   | Complete |
+|------------+----------|
+| Emacs lisp | ✓        |
+| Haskell    |          |
+| Prolog     |          |
+| Python     |          |
