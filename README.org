@@ -23,3 +23,6 @@ languages.
 | Haskell    |          |
 | Prolog     |          |
 | Python     |          |
+
+** Links
+- https://semiosis.github.io/ilambda/
