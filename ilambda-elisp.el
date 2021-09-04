@@ -8,29 +8,22 @@
 ;; itransform
 ;; imacro
 
-;; idefun vs imacro
+(defmacro defimacro (name &rest body)
+  "Define imacro"
+  (cond
+   ((= 0 (length body))
+    `(imacro/1
+      ,name))
+   ((= 1 (length body))
+    `(imacro/2
+      ,name
+      ,(car body)))
+   ((= 2 (length body))
+    `(imacro/3
+      ,name
+      ,(car body)
+      ,(cadr body)))))
 
-;; imacro should take
-
-;; i macro-expand?
-
-;; Well, I could inject a macro with a value which is actually sent to the LM?
-
-;; Make a legit imaginary programming library for emacs
-
-;; Do an (ignore-errors (eval-string result)) on the result
-(defmacro ieval (&rest body)
-  "imaginary eval")
-
-;; TODO Make an elisp code evaluator based on prompting
-
-;; TODO Make an elisp code generator based on prompting
-;; This should create a function, which may not necessarily work
-;; But can be imaginarily evaluated
-
-;; if any of these arguments are not available, infer them via prompt
-;; The macro can be expanded to create an instance of the function.
-;; idefun does not necessarily need imacro.
 (defmacro imacro/3 (name args docstr)
   "Does not evaluate. It merely generates code."
   (let* ((argstr (apply 'cmd (mapcar 'slugify (mapcar 'str args))))
@@ -72,6 +65,32 @@
          (body (eval-string (concat "'" bodystr))))
     `(progn ,body)))
 
+;; Use a comment for the task before the call to the lambda.
+;; Return an evalled string.
+(defmacro ilambda/code (args code)
+  `(ieval
+    (double-number 5)
+    (defun double-number ,args
+      (x * x))))
+
+;; Use a comment for the task before the call to the lambda.
+;; Return an evalled string.
+(defmacro ilambda/task (args task)
+  `(ieval
+    (double-number 5)
+    (defun double-number ,args
+      (x * x))))
+
+(defmacro ilambda (args code-or-task)
+  "define ilambda"
+  ((cond
+    ((stringp code-or-task)
+     `(ilambda/code ,args ,code-or-task))
+    ((listp code-or-task)
+     `(ilambda/code ,args ,code-or-task)))))
+
+(defalias 'iλ 'ilambda)
+
 (idefun double (a)
         "this function doubles its input")
 
@@ -85,18 +104,34 @@
   (etv (pps (ilist 10 "tennis players"))))
 
 (defmacro ieval (expression &optional code)
-  (let* ((code-str (pps code))
+  "Imaginarily evaluate the expression, given the code and return a real result."
+  (let* ((code-str
+          (cond
+           ((stringp code) code)
+           ((listp code) (pps code))))
+         (expression-str
+          (cond
+           ((stringp expression) expression)
+           ((listp expression) (pp-oneline expression))))
          (result (car
                   (pen-single-generation
                    (pf-imagine-evaluating-emacs-lisp/2
-                    code-str expression
+                    code-str expression-str
                     :no-select-result t :select-only-match t)))))
-    (eval-string result)))
+    (ignore-errors
+      (eval-string result))))
 
 (defun test-ieval ()
   (ieval
    (double-number 5)
    (defun double-number (x)
      (x * x))))
+
+(defun test-imacro ()
+  ;; (defimacro my/subtract)
+
+  (defimacro my/itimes (a b c)
+    "multiply three complex numbers")
+  (defimacro my/itimes (a b c)))
 
 (provide 'ilambda)
