@@ -28,5 +28,8 @@ library will be uniquely tailored to each language.
 | Prolog     |          |
 | Python     |          |
 
+** Prerequisites
+- https://github.com/semiosis/pen.el/
+
 ** Links
 - https://semiosis.github.io/ilambda/
