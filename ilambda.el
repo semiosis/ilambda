@@ -71,8 +71,18 @@
     (list a (eval a)))
   args))
 
-(defmacro idefun (name-sym args code-or-task &optional task-or-code)
+
+(defmacro idefun (name-sym args &optional code-or-task task-or-code)
   "Define an imaginary function"
+  (cond
+   ((and (stringp name-sym)
+         (not code-or-task))
+    (progn
+      (setq code-or-task name-sym)
+      (setq name-sym (slugify name-sym))))
+   ((and (symbolp name-sym)
+         (not code-or-task))
+    (setq code-or-task (pen-snc "unsnakecase" (sym2str name-sym)))))
   `(defalias ',name-sym
      (function ,(eval
                  `(ilambda ,args ,code-or-task ,task-or-code)))))
@@ -111,6 +121,23 @@
             ;; An function and a function call
             (,',fsym ,@vals)
             ,,(concat ";; " task)))))))
+
+(comment
+ (ilambda (n) "generate fibonacci sequence"))
+
+(defun test-generate-fib ()
+  (interactive)
+  (idefun generate-fib-sequence (n))
+  (etv (generate-fib-sequence 5)))
+
+(defun test-lambda ()
+  (interactive)
+
+  (etv (funcall
+        (lambda (n)
+          (let ((vals (mapcar 'eval '(n))))
+            (+ 10 (car vals))))
+        5)))
 
 (defmacro ilambda/task-code (args task code)
   (let* ((slug (slugify (eval task)))
@@ -187,7 +214,7 @@
 
 (defun test-ilist ()
   (interactive)
-  (etv (pps (ilist 10 "tennis players"))))
+  (etv (pps (ilist 10 "tennis players in no particular order"))))
 
 (defmacro ieval (expression &optional code-sexp-or-raw)
   "Imaginarily evaluate the expression, given the code-sexp-or-raw and return a real result."
@@ -204,8 +231,9 @@
                    (pf-imagine-evaluating-emacs-lisp/2
                     code-str expression-str
                     :no-select-result t :select-only-match t)))))
-    (ignore-errors
-      (eval-string result))))
+    (try
+     (setq result (eval-string (concat "''" result))))
+    result))
 
 (defun test-ieval ()
   (ieval
