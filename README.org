@@ -5,6 +5,10 @@ basic set of functions for doing imaginary
 programming in a variety of programming
 languages.
 
+In short, imaginary programming (IP) is where data and knowledge has been
+substituted for inference by a LM. Therefore, the implementation of an iλ
+library will be uniquely tailored to each language.
+
 ** Syntax forms
 | name             | type     | depends on           | basic idea                                                                                                     |
 |------------------+----------+----------------------+----------------------------------------------------------------------------------------------------------------|
