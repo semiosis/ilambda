@@ -13,4 +13,5 @@ getDate = readProcess "date" [] ""
 main :: IO ()
 main = do
   putStrLn "hello world"
-  putStrLn getDate
+  d <- getDate
+  putStrLn d
