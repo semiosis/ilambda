@@ -17,8 +17,16 @@ import GHC.Generics
 pickUpLine :: String -> IO String
 pickUpLine = readProcess "/home/shane/scripts/myeval" ["pena", "very-witty-pick-up-lines-for-a-topic/1"]
 
+-- -- Read list of strings using Aeson
+-- aesonReadListOfStrings :: String -> Maybe [String]
+-- aesonReadListOfStrings = decode
+
+-- Converting strings
+-- https://stackoverflow.com/questions/3232074/what-is-the-best-way-to-convert-string-to-bytestring
+
 main :: IO ()
 main = do
+  pickUpLine "Haskell" >>= pickUpLine "Haskell" >>= putStrLn
   putStrLn "Hello world" >> pickUpLine "Haskell" >>= putStrLn
   pickUpLine "Haskell" >>= putStrLn
   d <- pickUpLine "Library"
