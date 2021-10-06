@@ -1,5 +1,5 @@
 module Lib
-    ( someFunc
+    ( pickUpLine
     ) where
 
 import System.Process
