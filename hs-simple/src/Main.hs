@@ -6,6 +6,8 @@ module Main where
 
 -- How to add this under the current setup? -- What is haskell-ide using?
 import Data.Aeson
+-- aeson pretty
+-- import Data.Aeson.Pretty as AesonPretty
 import qualified Data.ByteString.Lazy as B
 import qualified Data.ByteString.Lazy.UTF8 as BLU
 import System.Process ( readProcess )
