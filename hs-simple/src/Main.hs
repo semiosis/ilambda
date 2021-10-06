@@ -7,6 +7,7 @@ module Main where
 -- How to add this under the current setup? -- What is haskell-ide using?
 import Data.Aeson
 import qualified Data.ByteString.Lazy as B
+import qualified Data.ByteString.Lazy.UTF8 as BLU
 import System.Process ( readProcess )
 
 import Data.Text
@@ -24,13 +25,16 @@ pickUpLine = readProcess "/home/shane/scripts/myeval" ["pena", "very-witty-pick-
 -- Converting strings
 -- https://stackoverflow.com/questions/3232074/what-is-the-best-way-to-convert-string-to-bytestring
 
+decodeResultsList :: String -> Maybe [String]
+decodeResultsList results = Data.Aeson.decode (BLU.fromString ((Prelude.take (Prelude.length results - 1) results) :: String)) :: Maybe [String]
+
 main :: IO ()
 main = do
   -- >> discards the return value of the previous function, so you may use after putStrLn.
   -- >> is the hidden behaviour of newlines in do notation.
-  pickUpLine "Haskell" >>= putStrLn >> pickUpLine "Haskell" >>= putStrLn >> putStrLn "Hello world" >> pickUpLine "Haskell" >>= putStrLn
-  pickUpLine "Haskell" >>= pickUpLine "Haskell" >>= putStrLn
-  putStrLn "Hello world" >> pickUpLine "Haskell" >>= putStrLn
+  -- pickUpLine "Haskell" >>= putStrLn >> pickUpLine "Haskell" >>= putStrLn >> putStrLn "Hello world" >> pickUpLine "Haskell" >>= putStrLn
+  -- pickUpLine "Haskell" >> pickUpLine "Haskell" >>= putStrLn
+  -- putStrLn "Hello world" >> pickUpLine "Haskell" >>= putStrLn
   pickUpLine "Haskell" >>= putStrLn
   d <- pickUpLine "Library"
   putStrLn d
