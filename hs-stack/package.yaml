@@ -36,6 +36,7 @@ executables:
     - -rtsopts
     - -with-rtsopts=-N
     dependencies:
+    - aeson
     - ilambda
 
 tests:
