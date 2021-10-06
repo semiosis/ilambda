@@ -1,4 +1,5 @@
 {-# OPTIONS_GHC -Wno-deferred-type-errors #-}
+
 module Main where
 
 -- How to add this under the current setup? -- What is haskell-ide using?
