@@ -55,17 +55,6 @@
   (major1) == 1 && (major2) == 6 && (minor) <= 13)
 #endif /* MIN_VERSION_process */
 
-/* package text-1.2.4.1 */
-#ifndef VERSION_text
-#define VERSION_text "1.2.4.1"
-#endif /* VERSION_text */
-#ifndef MIN_VERSION_text
-#define MIN_VERSION_text(major1,major2,minor) (\
-  (major1) <  1 || \
-  (major1) == 1 && (major2) <  2 || \
-  (major1) == 1 && (major2) == 2 && (minor) <= 4)
-#endif /* MIN_VERSION_text */
-
 /* tool cpphs-1.20.9 */
 #ifndef TOOL_VERSION_cpphs
 #define TOOL_VERSION_cpphs "1.20.9"
@@ -120,17 +109,6 @@
   (major1) == 2 && (major2) <  24 || \
   (major1) == 2 && (major2) == 24 && (minor) <= 2)
 #endif /* MIN_TOOL_VERSION_haddock */
-
-/* tool happy-1.20.0 */
-#ifndef TOOL_VERSION_happy
-#define TOOL_VERSION_happy "1.20.0"
-#endif /* TOOL_VERSION_happy */
-#ifndef MIN_TOOL_VERSION_happy
-#define MIN_TOOL_VERSION_happy(major1,major2,minor) (\
-  (major1) <  1 || \
-  (major1) == 1 && (major2) <  20 || \
-  (major1) == 1 && (major2) == 20 && (minor) <= 0)
-#endif /* MIN_TOOL_VERSION_happy */
 
 /* tool hpc-0.68 */
 #ifndef TOOL_VERSION_hpc
@@ -199,8 +177,11 @@
 #endif /* MIN_TOOL_VERSION_strip */
 
 #ifndef CURRENT_COMPONENT_ID
-#define CURRENT_COMPONENT_ID "hs-simple-0.1.0.0-KtcSWVS0qMUNpUShO6upm-hs-simple"
+#define CURRENT_COMPONENT_ID "hs-simple-0.1.0.0-FM71HFR4Sie2gJ8OKXlXXv-hs-simple"
 #endif /* CURRENT_COMPONENT_ID */
 #ifndef CURRENT_PACKAGE_VERSION
 #define CURRENT_PACKAGE_VERSION "0.1.0.0"
 #endif /* CURRENT_PACKAGE_VERSION */
+
+#undef CURRENT_PACKAGE_KEY
+#undef CURRENT_COMPONENT_ID
