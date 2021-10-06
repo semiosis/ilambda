@@ -3,7 +3,77 @@
 # For more information, please see the documentation at:
 #   https://docs.haskellstack.org/en/stable/lock_files
 
-packages: []
+packages:
+- completed:
+    hackage: bytestring-encoding-0.1.1.0@sha256:1c3b97eb6345fd7153006211c8272215cd78bb0cf440c41185290822f1e3f2c2,1738
+    pantry-tree:
+      size: 714
+      sha256: 161056cbb1a4e1bb605c60b7779e1fac44939b3984dfbd3347e96b273c871f5c
+  original:
+    hackage: bytestring-encoding-0.1.1.0@sha256:1c3b97eb6345fd7153006211c8272215cd78bb0cf440c41185290822f1e3f2c2,1738
+- completed:
+    hackage: ghc-api-compat-8.10.7@sha256:c7f56849665ab1a02e0cd2c8b1d6e539fe3930cbf3c9dce511e3189ce8e15fad,3337
+    pantry-tree:
+      size: 112
+      sha256: 9e401fc0d33aab23be0901214cce203ed5a9c6a3e4a223cfb8eba36d036f2f4c
+  original:
+    hackage: ghc-api-compat-8.10.7@sha256:c7f56849665ab1a02e0cd2c8b1d6e539fe3930cbf3c9dce511e3189ce8e15fad,3337
+- completed:
+    hackage: heapsize-0.3.0.1@sha256:0b69aa97a46d819b700ac7b145f3b5493c3565cf2c5b8298682238d405d0326e,1417
+    pantry-tree:
+      size: 330
+      sha256: 0cca5bf22f4ebe76f2056ce0ef0c6bc558c24241762cdef79dc7a13b7f8b289f
+  original:
+    hackage: heapsize-0.3.0.1@sha256:0b69aa97a46d819b700ac7b145f3b5493c3565cf2c5b8298682238d405d0326e,1417
+- completed:
+    hackage: hie-compat-0.2.1.0@sha256:150d5cb1495525c6d9c14fb0db1e19415843e90431f8b98877b9625bb0573601,1636
+    pantry-tree:
+      size: 1410
+      sha256: 0814a50268318b67b6d47451e716eb0cac47a487ff6b1f00cb30002f80e33f11
+  original:
+    hackage: hie-compat-0.2.1.0@sha256:150d5cb1495525c6d9c14fb0db1e19415843e90431f8b98877b9625bb0573601,1636
+- completed:
+    hackage: hiedb-0.4.0.0@sha256:b6dadd5cefc8c1052bc4b29144f616ca9c22e863a96d8e447d66a4d32c96fd4a,2987
+    pantry-tree:
+      size: 1065
+      sha256: a97267e78ec24e3c3c7f5354e9e78d03a99e44bae2964f17102d5f074d23bdb0
+  original:
+    hackage: hiedb-0.4.0.0@sha256:b6dadd5cefc8c1052bc4b29144f616ca9c22e863a96d8e447d66a4d32c96fd4a,2987
+- completed:
+    hackage: hls-graph-1.4.0.0@sha256:78409c1f4063527c3746e0c79af6dc280133156ebef6cf6ffd118e6a545c703c,1472
+    pantry-tree:
+      size: 658
+      sha256: 2462126f05ccf2728ab4e5a86d3067e901d807d7921a6faa3a4e7764cffc1843
+  original:
+    hackage: hls-graph-1.4.0.0@sha256:78409c1f4063527c3746e0c79af6dc280133156ebef6cf6ffd118e6a545c703c,1472
+- completed:
+    hackage: hls-plugin-api-1.2.0.1@sha256:d501ee99370667547590cb7318b20e591f8011409a4360924cc5ff46100dd53a,2142
+    pantry-tree:
+      size: 496
+      sha256: 8ab6678026e8e16ecbdc563f129c40e599ffc5e8e58c6c5fb73ee7da119c31bc
+  original:
+    hackage: hls-plugin-api-1.2.0.1@sha256:d501ee99370667547590cb7318b20e591f8011409a4360924cc5ff46100dd53a,2142
+- completed:
+    hackage: implicit-hie-cradle-0.3.0.5@sha256:5f5e575f549b2a9db664be7650b5c3c9226e313bddc46c79e2e83eb349f8e692,2610
+    pantry-tree:
+      size: 381
+      sha256: 456967128f743e067799d999fd094436b6fe122c508a9f1599b1ab76038bcac7
+  original:
+    hackage: implicit-hie-cradle-0.3.0.5@sha256:5f5e575f549b2a9db664be7650b5c3c9226e313bddc46c79e2e83eb349f8e692,2610
+- completed:
+    hackage: retrie-1.0.0.0@sha256:82014773115807f649f60fe4a3246911bbccd063a3c846cf5665e71f237bdd2d,4241
+    pantry-tree:
+      size: 5868
+      sha256: 658582efa12fcd22d7630d2e9574131cb556a666e22e0220a792edcb979ee070
+  original:
+    hackage: retrie-1.0.0.0@sha256:82014773115807f649f60fe4a3246911bbccd063a3c846cf5665e71f237bdd2d,4241
+- completed:
+    hackage: implicit-hie-0.1.2.6@sha256:f50a908979a574a881f753c0f9a5224f023f438b30fdefc5b7fa01803b07a280,2998
+    pantry-tree:
+      size: 844
+      sha256: 87e1a41e292526d86b55668bca628cf917056d82001438dc6975e4f35cf5210d
+  original:
+    hackage: implicit-hie-0.1.2.6@sha256:f50a908979a574a881f753c0f9a5224f023f438b30fdefc5b7fa01803b07a280,2998
 snapshots:
 - completed:
     size: 586041

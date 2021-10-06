@@ -22,6 +22,17 @@
   (major1) == 1 && (major2) == 5 && (minor) <= 6)
 #endif /* MIN_VERSION_aeson */
 
+/* package aeson-pretty-0.8.8 */
+#ifndef VERSION_aeson_pretty
+#define VERSION_aeson_pretty "0.8.8"
+#endif /* VERSION_aeson_pretty */
+#ifndef MIN_VERSION_aeson_pretty
+#define MIN_VERSION_aeson_pretty(major1,major2,minor) (\
+  (major1) <  0 || \
+  (major1) == 0 && (major2) <  8 || \
+  (major1) == 0 && (major2) == 8 && (minor) <= 8)
+#endif /* MIN_VERSION_aeson_pretty */
+
 /* package base-4.14.3.0 */
 #ifndef VERSION_base
 #define VERSION_base "4.14.3.0"
@@ -132,6 +143,17 @@
   (major1) == 2 && (major2) == 24 && (minor) <= 2)
 #endif /* MIN_TOOL_VERSION_haddock */
 
+/* tool happy-1.20.0 */
+#ifndef TOOL_VERSION_happy
+#define TOOL_VERSION_happy "1.20.0"
+#endif /* TOOL_VERSION_happy */
+#ifndef MIN_TOOL_VERSION_happy
+#define MIN_TOOL_VERSION_happy(major1,major2,minor) (\
+  (major1) <  1 || \
+  (major1) == 1 && (major2) <  20 || \
+  (major1) == 1 && (major2) == 20 && (minor) <= 0)
+#endif /* MIN_TOOL_VERSION_happy */
+
 /* tool hpc-0.68 */
 #ifndef TOOL_VERSION_hpc
 #define TOOL_VERSION_hpc "0.68"
@@ -199,7 +221,7 @@
 #endif /* MIN_TOOL_VERSION_strip */
 
 #ifndef CURRENT_COMPONENT_ID
-#define CURRENT_COMPONENT_ID "hs-simple-0.1.0.0-Lb5JikjIgIzDmJ2opYSTcs-hs-simple"
+#define CURRENT_COMPONENT_ID "hs-simple-0.1.0.0-ARQcoibveRjAR22u5rzMxH-hs-simple"
 #endif /* CURRENT_COMPONENT_ID */
 #ifndef CURRENT_PACKAGE_VERSION
 #define CURRENT_PACKAGE_VERSION "0.1.0.0"
