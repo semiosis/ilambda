@@ -4,12 +4,14 @@ module UnixFuncs where
 
 import System.Process
 
--- Get the date with the UNIX date command
+-- This works directly in ghci
+-- pickUpLine "Library"
 pickUpLine :: String -> IO String
-pickUpLine = readProcess "myeval" ["pena", "-u", "very-witty-pick-up-lines-for-a-topic/1"]
+pickUpLine = readProcess "myeval" ["pena", "very-witty-pick-up-lines-for-a-topic/1"]
 
 main :: IO ()
 main = do
-  putStrLn "Hello world" >> pickUpLine "Haskell" >>= putStrLn
+  -- putStrLn "Hello world" >> pickUpLine "Haskell" >>= putStrLn
+  pickUpLine "Haskell" >>= putStrLn
   d <- pickUpLine "Library"
   putStrLn d
