@@ -4,7 +4,7 @@ module Main where
 import Lib
 
 -- How to add this under the current setup? -- What is haskell-ide using?
--- import Data.Aeson
+import Data.Aeson
 
 main :: IO ()
 main = do
