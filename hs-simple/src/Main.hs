@@ -2,7 +2,7 @@
 module Main where
 
 -- How to add this under the current setup? -- What is haskell-ide using?
--- import Data.Aeson
+import Data.Aeson
 import System.Process
 
 -- This works directly in ghci
