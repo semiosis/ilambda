@@ -30,6 +30,16 @@
   (major1) == 4 && (major2) <  14 || \
   (major1) == 4 && (major2) == 14 && (minor) <= 1)
 #endif /* MIN_VERSION_base */
+/* package ilambda-hs-0.1.0.0 */
+#ifndef VERSION_ilambda_hs
+#define VERSION_ilambda_hs "0.1.0.0"
+#endif /* VERSION_ilambda_hs */
+#ifndef MIN_VERSION_ilambda_hs
+#define MIN_VERSION_ilambda_hs(major1,major2,minor) (\
+  (major1) <  0 || \
+  (major1) == 0 && (major2) <  1 || \
+  (major1) == 0 && (major2) == 1 && (minor) <= 0)
+#endif /* MIN_VERSION_ilambda_hs */
 /* package process-1.6.9.0 */
 #ifndef VERSION_process
 #define VERSION_process "1.6.9.0"
@@ -132,11 +142,8 @@
   (major1) == 2 && (major2) == 34 && (minor) <= 0)
 #endif /* MIN_TOOL_VERSION_strip */
 
-#ifndef CURRENT_PACKAGE_KEY
-#define CURRENT_PACKAGE_KEY "ilambda-hs-0.1.0.0-inplace"
-#endif /* CURRENT_packageKey */
 #ifndef CURRENT_COMPONENT_ID
-#define CURRENT_COMPONENT_ID "ilambda-hs-0.1.0.0-inplace"
+#define CURRENT_COMPONENT_ID "ilambda-hs-0.1.0.0-inplace-ilambda-exe"
 #endif /* CURRENT_COMPONENT_ID */
 #ifndef CURRENT_PACKAGE_VERSION
 #define CURRENT_PACKAGE_VERSION "0.1.0.0"
