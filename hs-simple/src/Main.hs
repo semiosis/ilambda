@@ -26,7 +26,7 @@ pickUpLine = readProcess "/home/shane/scripts/myeval" ["pena", "very-witty-pick-
 -- https://stackoverflow.com/questions/3232074/what-is-the-best-way-to-convert-string-to-bytestring
 
 decodeResultsList :: String -> Maybe [String]
-decodeResultsList results = Data.Aeson.decode (BLU.fromString ((Prelude.take (Prelude.length results - 1) results) :: String)) :: Maybe [String]
+decodeResultsList results = Data.Aeson.decode (BLU.fromString (Prelude.take (Prelude.length results - 1) results :: String)) :: Maybe [String]
 
 main :: IO ()
 main = do
