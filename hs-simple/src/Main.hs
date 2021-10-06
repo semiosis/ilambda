@@ -2,7 +2,7 @@
 module Main where
 
 -- How to add this under the current setup? -- What is haskell-ide using?
---import Data.Aeson
+-- import Data.Aeson
 import System.Process ( readProcess )
 
 -- This works directly in ghci
@@ -12,7 +12,7 @@ pickUpLine = readProcess "/home/shane/scripts/myeval" ["pena", "very-witty-pick-
 
 main :: IO ()
 main = do
-  -- putStrLn "Hello world" >> pickUpLine "Haskell" >>= putStrLn
+  putStrLn "Hello world" >> pickUpLine "Haskell" >>= putStrLn
   pickUpLine "Haskell" >>= putStrLn
   d <- pickUpLine "Library"
   putStrLn d
