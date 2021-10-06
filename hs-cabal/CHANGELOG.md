@@ -1,4 +1,4 @@
-# Revision history for ilambda-hs
+# Revision history for hs-cabal
 
 ## 0.1.0.0 -- YYYY-mm-dd
 

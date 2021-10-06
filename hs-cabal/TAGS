@@ -1,11 +1,0 @@
-
-./Setup.hs,15
-main main1,2
-
-./src/Lib.hs,46
-module LibLib0,1
-pickUpLine pickUpLine8,9
-
-./src/Main.hs,37
-module Main Main1,2
-main main8,9
