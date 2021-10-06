@@ -17,4 +17,4 @@ executable hs-simple
   hs-source-dirs:      src
   main-is:             Main.hs
   default-language:    Haskell2010
-  build-depends:       bytestring, text, process, aeson, base >= 4.7 && < 5
+  build-depends:       utf8-string, bytestring, text, process, aeson, base >= 4.7 && < 5
