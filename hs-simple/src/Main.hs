@@ -1,9 +1,16 @@
 {-# OPTIONS_GHC -Wno-deferred-type-errors #-}
+{-# LANGUAGE DeriveGeneric #-}
+{-# LANGUAGE OverloadedStrings #-}
+
 module Main where
 
 -- How to add this under the current setup? -- What is haskell-ide using?
 import Data.Aeson
+import qualified Data.ByteString.Lazy as B
 import System.Process ( readProcess )
+
+import Data.Text
+import GHC.Generics
 
 -- This works directly in ghci
 -- pickUpLine "Library"
