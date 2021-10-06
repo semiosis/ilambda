@@ -26,6 +26,7 @@ pickUpLine = readProcess "/home/shane/scripts/myeval" ["pena", "very-witty-pick-
 
 main :: IO ()
 main = do
+  pickUpLine "Haskell" >>= putStrLn >> pickUpLine "Haskell" >>= putStrLn >> putStrLn "Hello world" >> pickUpLine "Haskell" >>= putStrLn
   pickUpLine "Haskell" >>= pickUpLine "Haskell" >>= putStrLn
   putStrLn "Hello world" >> pickUpLine "Haskell" >>= putStrLn
   pickUpLine "Haskell" >>= putStrLn
