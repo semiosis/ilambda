@@ -2,7 +2,9 @@
 module Main where
 
 import Lib
-import Data.Aeson
+
+-- How to add this under the current setup? -- What is haskell-ide using?
+-- import Data.Aeson
 
 main :: IO ()
 main = do
