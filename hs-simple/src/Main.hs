@@ -39,4 +39,9 @@ main = do
   -- putStrLn "Hello world" >> pickUpLine "Haskell" >>= putStrLn
   pickUpLine "Haskell" >>= putStrLn
   d <- pickUpLine "Library"
+
+  -- TODO lift d into Maybe String and pass to decodeResultsList
+  -- decodeResultsList d >>= putStrLn
+  {- decodeResultsList d >>= putStrLn -}
+
   putStrLn d
