@@ -29,12 +29,12 @@ version :: Version
 version = Version [0,1,0,0] []
 bindir, libdir, dynlibdir, datadir, libexecdir, sysconfdir :: FilePath
 
-bindir     = "/home/shane/var/smulliga/source/git/semiosis/ilambda/hs-simple/.stack-work/install/x86_64-linux-tinfo6/7b677bac07642bfc3f849c4c170d7feb76bf71512cae24936af1e21508158d4c/8.10.7/bin"
-libdir     = "/home/shane/var/smulliga/source/git/semiosis/ilambda/hs-simple/.stack-work/install/x86_64-linux-tinfo6/7b677bac07642bfc3f849c4c170d7feb76bf71512cae24936af1e21508158d4c/8.10.7/lib/x86_64-linux-ghc-8.10.7/hs-simple-0.1.0.0-ARQcoibveRjAR22u5rzMxH-hs-simple"
-dynlibdir  = "/home/shane/var/smulliga/source/git/semiosis/ilambda/hs-simple/.stack-work/install/x86_64-linux-tinfo6/7b677bac07642bfc3f849c4c170d7feb76bf71512cae24936af1e21508158d4c/8.10.7/lib/x86_64-linux-ghc-8.10.7"
-datadir    = "/home/shane/var/smulliga/source/git/semiosis/ilambda/hs-simple/.stack-work/install/x86_64-linux-tinfo6/7b677bac07642bfc3f849c4c170d7feb76bf71512cae24936af1e21508158d4c/8.10.7/share/x86_64-linux-ghc-8.10.7/hs-simple-0.1.0.0"
-libexecdir = "/home/shane/var/smulliga/source/git/semiosis/ilambda/hs-simple/.stack-work/install/x86_64-linux-tinfo6/7b677bac07642bfc3f849c4c170d7feb76bf71512cae24936af1e21508158d4c/8.10.7/libexec/x86_64-linux-ghc-8.10.7/hs-simple-0.1.0.0"
-sysconfdir = "/home/shane/var/smulliga/source/git/semiosis/ilambda/hs-simple/.stack-work/install/x86_64-linux-tinfo6/7b677bac07642bfc3f849c4c170d7feb76bf71512cae24936af1e21508158d4c/8.10.7/etc"
+bindir     = "/home/shane/var/smulliga/source/git/semiosis/ilambda/hs-simple/.stack-work/install/x86_64-linux-tinfo6/208cfab785be3114f86773f85f5e75874ff89fc113edbdd28c7bd326a0ecaf2a/8.10.7/bin"
+libdir     = "/home/shane/var/smulliga/source/git/semiosis/ilambda/hs-simple/.stack-work/install/x86_64-linux-tinfo6/208cfab785be3114f86773f85f5e75874ff89fc113edbdd28c7bd326a0ecaf2a/8.10.7/lib/x86_64-linux-ghc-8.10.7/hs-simple-0.1.0.0-ARQcoibveRjAR22u5rzMxH-hs-simple"
+dynlibdir  = "/home/shane/var/smulliga/source/git/semiosis/ilambda/hs-simple/.stack-work/install/x86_64-linux-tinfo6/208cfab785be3114f86773f85f5e75874ff89fc113edbdd28c7bd326a0ecaf2a/8.10.7/lib/x86_64-linux-ghc-8.10.7"
+datadir    = "/home/shane/var/smulliga/source/git/semiosis/ilambda/hs-simple/.stack-work/install/x86_64-linux-tinfo6/208cfab785be3114f86773f85f5e75874ff89fc113edbdd28c7bd326a0ecaf2a/8.10.7/share/x86_64-linux-ghc-8.10.7/hs-simple-0.1.0.0"
+libexecdir = "/home/shane/var/smulliga/source/git/semiosis/ilambda/hs-simple/.stack-work/install/x86_64-linux-tinfo6/208cfab785be3114f86773f85f5e75874ff89fc113edbdd28c7bd326a0ecaf2a/8.10.7/libexec/x86_64-linux-ghc-8.10.7/hs-simple-0.1.0.0"
+sysconfdir = "/home/shane/var/smulliga/source/git/semiosis/ilambda/hs-simple/.stack-work/install/x86_64-linux-tinfo6/208cfab785be3114f86773f85f5e75874ff89fc113edbdd28c7bd326a0ecaf2a/8.10.7/etc"
 
 getBinDir, getLibDir, getDynLibDir, getDataDir, getLibexecDir, getSysconfDir :: IO FilePath
 getBinDir = catchIO (getEnv "hs_simple_bindir") (\_ -> return bindir)
