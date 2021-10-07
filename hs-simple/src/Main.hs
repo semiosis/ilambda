@@ -5,15 +5,15 @@
 module Main where
 
 -- How to add this under the current setup? -- What is haskell-ide using?
-import Data.Aeson
+import Data.Aeson ( decode )
 -- aeson pretty
 -- import Data.Aeson.Pretty as AesonPretty
 import qualified Data.ByteString.Lazy as B
 import qualified Data.ByteString.Lazy.UTF8 as BLU
 import System.Process ( readProcess )
 
-import Data.Text
-import GHC.Generics
+import Data.Text ()
+import GHC.Generics ()
 
 -- This works directly in ghci
 -- pickUpLine "Library"
