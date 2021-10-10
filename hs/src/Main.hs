@@ -20,22 +20,6 @@ getResults product = do
   return (decodeResultsList results)
 
 main :: IO ()
-main = putStrLn "hello world"
-
--- main :: IO ()
--- main = do
---   linesJson <- pickUpLine "Haskell"
---   -- decode linesJson using getResults
-
-
--- main :: IO ()
--- main = do
---   putStrLn ((fromJust (getResults "Weather")) <> "\\n\\n\\n" <> (fromJust (getResults "Sunshine")))
-
--- main = do
---   linesJson <- pickUpLine "Haskell"
---   lines <- decodeResultsList linesJson
---   return $ map (Just . fromJust) lines
-
---   -- -- print the Maybe [String], lines:
---   -- mapM_ putStrLn (Just lines)
+main = do
+    result <- getResults "Weather"
+    print $ unlines $ fromMaybe [] result
