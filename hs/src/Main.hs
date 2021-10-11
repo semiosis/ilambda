@@ -22,8 +22,9 @@ decodeResultsList results = Data.Aeson.decode (BLU.fromString (Prelude.take (Pre
 
 getResults :: String -> IO (Maybe [String])
 getResults product = do
-    results <- pickUpLine product
-    return (decodeResultsList results)
+  l <- listOf 10 "Butterfly species"
+  pickuplines <- pickUpLine product
+  return (decodeResultsList l) ++ decodeResultsList pickuplines
 
 main :: IO ()
 main = do
