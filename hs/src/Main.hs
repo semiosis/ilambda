@@ -7,6 +7,15 @@ import qualified Data.ByteString.Lazy.UTF8 as BLU
 import Data.Maybe ( fromJust, fromMaybe )
 import Control.Monad ( forM_ )
 
+-- TOOD Do some truth comparisons
+-- Make this return a Bool
+-- Even better, make it return True, False or Unknown
+factChecker :: String -> IO String
+factChecker = readProcess "/home/shane/scripts/myeval" ["pena", "pf-fact-checker/1"]
+
+factQuery :: String -> IO String
+factQuery = readProcess "/home/shane/scripts/myeval" ["pena", "pf-get-a-factual-result-given-a-question/1"]
+
 -- Have an list replicate
 listOf :: Integer -> String -> IO String
 listOf n = readProcess "/home/shane/scripts/myeval" ["pena", "pf-list-of/2", show n]
@@ -17,11 +26,18 @@ transpile program fromLanguage toLanguage = readProcess "/home/shane/scripts/mye
 pickUpLine :: String -> IO String
 pickUpLine = readProcess "/home/shane/scripts/myeval" ["pena", "very-witty-pick-up-lines-for-a-topic/1"]
 
+-- TODO Ensure I can override various settings but through Haskell
+-- Firstly, ensure I can update. I would have to export UPDATE=y to readProcess somehow
+
+askAnyQuestion :: String -> IO String
+askAnyQuestion = readProcess "/home/shane/scripts/myeval" ["pena", "pf-ask-any-question-or-yo-be-real/1"]
+
 decodeResultsList :: String -> Maybe [String]
 decodeResultsList results = Data.Aeson.decode (BLU.fromString (Prelude.take (Prelude.length results - 1) results :: String)) :: Maybe [String]
 
 getResults :: String -> IO (Maybe [String])
 getResults product = do
+  bks <- listOf 10 "Books by Noam Chomsky"
   bks <- listOf 10 "Books by Noam Chomsky"
   l <- listOf 10 "Butterfly species"
   pickuplines <- pickUpLine product
