@@ -20,6 +20,16 @@
   (major1) == 1 && (major2) <  5 || \
   (major1) == 1 && (major2) == 5 && (minor) <= 6)
 #endif /* MIN_VERSION_aeson */
+/* package aeson-pretty-0.8.8 */
+#ifndef VERSION_aeson_pretty
+#define VERSION_aeson_pretty "0.8.8"
+#endif /* VERSION_aeson_pretty */
+#ifndef MIN_VERSION_aeson_pretty
+#define MIN_VERSION_aeson_pretty(major1,major2,minor) (\
+  (major1) <  0 || \
+  (major1) == 0 && (major2) <  8 || \
+  (major1) == 0 && (major2) == 8 && (minor) <= 8)
+#endif /* MIN_VERSION_aeson_pretty */
 /* package base-4.14.1.0 */
 #ifndef VERSION_base
 #define VERSION_base "4.14.1.0"
@@ -50,6 +60,26 @@
   (major1) == 1 && (major2) <  6 || \
   (major1) == 1 && (major2) == 6 && (minor) <= 9)
 #endif /* MIN_VERSION_process */
+/* package text-1.2.4.1 */
+#ifndef VERSION_text
+#define VERSION_text "1.2.4.1"
+#endif /* VERSION_text */
+#ifndef MIN_VERSION_text
+#define MIN_VERSION_text(major1,major2,minor) (\
+  (major1) <  1 || \
+  (major1) == 1 && (major2) <  2 || \
+  (major1) == 1 && (major2) == 2 && (minor) <= 4)
+#endif /* MIN_VERSION_text */
+/* package utf8-string-1.0.2 */
+#ifndef VERSION_utf8_string
+#define VERSION_utf8_string "1.0.2"
+#endif /* VERSION_utf8_string */
+#ifndef MIN_VERSION_utf8_string
+#define MIN_VERSION_utf8_string(major1,major2,minor) (\
+  (major1) <  1 || \
+  (major1) == 1 && (major2) <  0 || \
+  (major1) == 1 && (major2) == 0 && (minor) <= 2)
+#endif /* MIN_VERSION_utf8_string */
 
 /* tool gcc-10 */
 #ifndef TOOL_VERSION_gcc
