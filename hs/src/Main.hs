@@ -16,6 +16,12 @@ factChecker = readProcess "/home/shane/scripts/myeval" ["pena", "pf-fact-checker
 factQuery :: String -> IO String
 factQuery = readProcess "/home/shane/scripts/myeval" ["pena", "pf-get-a-factual-result-given-a-question/1"]
 
+testFacts :: IO ()
+testFacts = do
+  output <- getResults "Weather"
+  shouldBeFalse <- factChecker "William Gibson wrote Simulacra & Simulation"
+  print $ unlines $ fromMaybe [] output
+
 -- Have an list replicate
 listOf :: Integer -> String -> IO String
 listOf n = readProcess "/home/shane/scripts/myeval" ["pena", "pf-list-of/2", show n]
