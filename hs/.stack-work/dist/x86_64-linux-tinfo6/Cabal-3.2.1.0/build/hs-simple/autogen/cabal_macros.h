@@ -11,6 +11,28 @@
   (major1) == 0 && (major2) == 1 && (minor) <= 0)
 #endif /* MIN_VERSION_hs_simple */
 
+/* package HUnit-1.6.2.0 */
+#ifndef VERSION_HUnit
+#define VERSION_HUnit "1.6.2.0"
+#endif /* VERSION_HUnit */
+#ifndef MIN_VERSION_HUnit
+#define MIN_VERSION_HUnit(major1,major2,minor) (\
+  (major1) <  1 || \
+  (major1) == 1 && (major2) <  6 || \
+  (major1) == 1 && (major2) == 6 && (minor) <= 2)
+#endif /* MIN_VERSION_HUnit */
+
+/* package QuickCheck-2.14.2 */
+#ifndef VERSION_QuickCheck
+#define VERSION_QuickCheck "2.14.2"
+#endif /* VERSION_QuickCheck */
+#ifndef MIN_VERSION_QuickCheck
+#define MIN_VERSION_QuickCheck(major1,major2,minor) (\
+  (major1) <  2 || \
+  (major1) == 2 && (major2) <  14 || \
+  (major1) == 2 && (major2) == 14 && (minor) <= 2)
+#endif /* MIN_VERSION_QuickCheck */
+
 /* package aeson-1.5.6.0 */
 #ifndef VERSION_aeson
 #define VERSION_aeson "1.5.6.0"
@@ -210,7 +232,7 @@
 #endif /* MIN_TOOL_VERSION_strip */
 
 #ifndef CURRENT_COMPONENT_ID
-#define CURRENT_COMPONENT_ID "hs-simple-0.1.0.0-ARQcoibveRjAR22u5rzMxH-hs-simple"
+#define CURRENT_COMPONENT_ID "hs-simple-0.1.0.0-2s7hDTc7iHt810D8LQwyCs-hs-simple"
 #endif /* CURRENT_COMPONENT_ID */
 #ifndef CURRENT_PACKAGE_VERSION
 #define CURRENT_PACKAGE_VERSION "0.1.0.0"
