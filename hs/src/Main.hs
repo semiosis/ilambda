@@ -11,6 +11,9 @@ import Control.Monad ( forM_ )
 listOf :: Integer -> String -> IO String
 listOf n = readProcess "/home/shane/scripts/myeval" ["pena", "pf-list-of/2", show n]
 
+transpile :: String -> String -> String -> IO String
+transpile program fromLanguage toLanguage = readProcess "/home/shane/scripts/myeval" ["pena", "pf-transpile/3", fromLanguage, toLanguage] program
+
 pickUpLine :: String -> IO String
 pickUpLine = readProcess "/home/shane/scripts/myeval" ["pena", "very-witty-pick-up-lines-for-a-topic/1"]
 
