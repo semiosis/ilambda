@@ -7,6 +7,8 @@ import qualified Data.ByteString.Lazy.UTF8 as BLU
 import Data.Maybe ( fromJust, fromMaybe )
 import Control.Monad ( forM_ )
 -- import qualified Test.QuickCheck as QC
+import Test.HUnit
+-- assertBool (Just 12 == Nothing) "HUnit expects the result of the Boolean expression"
 
 assert :: Bool -> a -> a
 assert False x = error "assertion failed!"
@@ -23,7 +25,7 @@ factChecker query = do
 testFacts :: IO ()
 testFacts = do
   shouldBeFalse <- factChecker "William Gibson wrote Simulacra & Simulation"
-  assert $ (not shouldBeFalse)
+  assertBool (not shouldBeFalse)
   print $ show shouldBeFalse
   shouldBeTrue <- factChecker "Jean Baudrillard wrote Simulacra & Simulation"
   print $ show shouldBeTrue
