@@ -6,7 +6,7 @@ import Data.Aeson ( decode )
 import qualified Data.ByteString.Lazy.UTF8 as BLU
 import Data.Maybe ( fromJust, fromMaybe )
 import Control.Monad ( forM_ )
-import Test.QuickCheck
+import Test.QuickCheck ( listOf )
 
 -- TOOD Do some truth comparisons
 -- Make this return a Bool
