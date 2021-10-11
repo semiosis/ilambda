@@ -19,8 +19,8 @@ testFacts :: IO ()
 testFacts = do
   shouldBeFalse <- factChecker "William Gibson wrote Simulacra & Simulation"
   print $ show shouldBeFalse
-  shouldBeFalse <- factChecker "Jean Baudrillard wrote Simulacra & Simulation"
-  print $ show shouldBeFalse
+  shouldBeTrue <- factChecker "Jean Baudrillard wrote Simulacra & Simulation"
+  print $ show shouldBeTrue
 
 factQuery :: String -> IO String
 factQuery = readProcess "/home/shane/scripts/myeval" ["pena", "pf-get-a-factual-result-given-a-question/1"]
