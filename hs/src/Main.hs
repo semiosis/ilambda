@@ -6,6 +6,7 @@ import Data.Aeson ( decode )
 import qualified Data.ByteString.Lazy.UTF8 as BLU
 import Data.Maybe ( fromJust, fromMaybe )
 import Control.Monad ( forM_ )
+import Test.QuickCheck
 
 -- TOOD Do some truth comparisons
 -- Make this return a Bool
@@ -18,6 +19,7 @@ factChecker query = do
 testFacts :: IO ()
 testFacts = do
   shouldBeFalse <- factChecker "William Gibson wrote Simulacra & Simulation"
+  assert (not shouldBeFalse)
   print $ show shouldBeFalse
   shouldBeTrue <- factChecker "Jean Baudrillard wrote Simulacra & Simulation"
   print $ show shouldBeTrue
