@@ -22,9 +22,11 @@ decodeResultsList results = Data.Aeson.decode (BLU.fromString (Prelude.take (Pre
 
 getResults :: String -> IO (Maybe [String])
 getResults product = do
+  bks <- listOf 10 "Books by Noam Chomsky"
   l <- listOf 10 "Butterfly species"
   pickuplines <- pickUpLine product
-  return (decodeResultsList l) ++ decodeResultsList pickuplines
+  -- return ((fromMaybe [] (decodeResultsList l)) ++ (fromMaybe [] (decodeResultsList pickuplines)))
+  return (decodeResultsList pickuplines)
 
 main :: IO ()
 main = do
