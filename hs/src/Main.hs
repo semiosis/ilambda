@@ -11,8 +11,8 @@ import Control.Monad ( forM_ )
 -- Make this return a Bool
 -- Even better, make it return True, False or Unknown
 factChecker :: String -> IO Bool
-factChecker = do
-  s <- readProcess "/home/shane/scripts/myeval" ["pena", "pf-fact-checker/1"]
+factChecker query = do
+  s <- readProcess "/home/shane/scripts/myeval" ["pena", "pf-fact-checker/1"] query
   return (s == "True")
 
 testFacts :: IO ()
@@ -45,7 +45,7 @@ decodeResultsList results = Data.Aeson.decode (BLU.fromString (Prelude.take (Pre
 getResults :: String -> IO (Maybe [String])
 getResults product = do
   bks <- listOf 10 "Books by Noam Chomsky"
-  bks <- listOf 10 "Books by Noam Chomsky"
+  jbks <- listOf 10 "Books by John Baudrillard"
   l <- listOf 10 "Butterfly species"
   pickuplines <- pickUpLine product
   -- return ((fromMaybe [] (decodeResultsList l)) ++ (fromMaybe [] (decodeResultsList pickuplines)))
