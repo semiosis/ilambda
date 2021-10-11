@@ -6,7 +6,11 @@ import Data.Aeson ( decode )
 import qualified Data.ByteString.Lazy.UTF8 as BLU
 import Data.Maybe ( fromJust, fromMaybe )
 import Control.Monad ( forM_ )
-import qualified Test.QuickCheck as QC
+-- import qualified Test.QuickCheck as QC
+
+assert :: Bool -> a -> a
+assert False x = error "assertion failed!"
+assert _     x = x
 
 -- TOOD Do some truth comparisons
 -- Make this return a Bool
@@ -19,7 +23,7 @@ factChecker query = do
 testFacts :: IO ()
 testFacts = do
   shouldBeFalse <- factChecker "William Gibson wrote Simulacra & Simulation"
-  QC.assert (not shouldBeFalse)
+  assert (not shouldBeFalse)
   print $ show shouldBeFalse
   shouldBeTrue <- factChecker "Jean Baudrillard wrote Simulacra & Simulation"
   print $ show shouldBeTrue
