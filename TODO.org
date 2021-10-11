@@ -1,0 +1,4 @@
+- ilist
+  - For haskell, this would generate an infinite list
+  - But the Haskell function should be called =listOf=
+  - But Haskell should also have an IList data type
