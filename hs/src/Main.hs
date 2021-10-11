@@ -10,17 +10,18 @@ import Control.Monad ( forM_ )
 -- TOOD Do some truth comparisons
 -- Make this return a Bool
 -- Even better, make it return True, False or Unknown
-factChecker :: String -> IO String
-factChecker = readProcess "/home/shane/scripts/myeval" ["pena", "pf-fact-checker/1"]
-
-factQuery :: String -> IO String
-factQuery = readProcess "/home/shane/scripts/myeval" ["pena", "pf-get-a-factual-result-given-a-question/1"]
+factChecker :: String -> IO Bool
+factChecker = do
+  s <- readProcess "/home/shane/scripts/myeval" ["pena", "pf-fact-checker/1"]
+  return (s == "True")
 
 testFacts :: IO ()
 testFacts = do
-  output <- getResults "Weather"
   shouldBeFalse <- factChecker "William Gibson wrote Simulacra & Simulation"
-  print $ unlines $ fromMaybe [] output
+  print $ show shouldBeFalse
+
+factQuery :: String -> IO String
+factQuery = readProcess "/home/shane/scripts/myeval" ["pena", "pf-get-a-factual-result-given-a-question/1"]
 
 -- Have an list replicate
 listOf :: Integer -> String -> IO String
