@@ -23,7 +23,7 @@ factChecker query = do
 testFacts :: IO ()
 testFacts = do
   shouldBeFalse <- factChecker "William Gibson wrote Simulacra & Simulation"
-  assert (not shouldBeFalse)
+  assert $ (not shouldBeFalse)
   print $ show shouldBeFalse
   shouldBeTrue <- factChecker "Jean Baudrillard wrote Simulacra & Simulation"
   print $ show shouldBeTrue
