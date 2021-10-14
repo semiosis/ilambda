@@ -1,3 +1,5 @@
+default: hs
+
 hs:
 	cd hs && cabal build
 
