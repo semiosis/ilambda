@@ -46,7 +46,7 @@ penau funName args = readProcess "/home/shane/scripts/myeval" (["unbuffer", "pen
 
 -- Have an list replicate
 listOf :: Integer -> String -> IO String
-listOf n = readProcess "/home/shane/scripts/myeval" ["pena", "pf-list-of/2", show n]
+listOf n thing = pena "pf-list-of/2" [show n, thing]
 
 -- How to modify a function to get it to do it differently?
 -- listOf 5 "worst American football teams"
