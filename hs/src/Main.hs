@@ -41,6 +41,9 @@ penh funName = readProcess "/home/shane/scripts/myeval" ["unbuffer", "penh", fun
 pena :: String -> [String] -> IO String
 pena funName args = readProcess "/home/shane/scripts/myeval" (["unbuffer", "pena", funName] ++ args) ""
 
+penau :: String -> [String] -> IO String
+penau funName args = readProcess "/home/shane/scripts/myeval" (["unbuffer", "pena", "-u", funName] ++ args) ""
+
 -- Have an list replicate
 listOf :: Integer -> String -> IO String
 listOf n = readProcess "/home/shane/scripts/myeval" ["pena", "pf-list-of/2", show n]
