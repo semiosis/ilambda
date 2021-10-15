@@ -7,6 +7,7 @@
 ;; ifilter
 ;; itransform
 ;; imacro
+;; iequals
 
 (defmacro defimacro (name &rest body)
   "Define imacro"
