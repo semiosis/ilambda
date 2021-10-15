@@ -48,6 +48,9 @@ penau funName args = readProcess "/home/shane/scripts/myeval" (["unbuffer", "pen
 listOf :: Integer -> String -> IO String
 listOf n thing = pena "pf-list-of/2" [show n, thing]
 
+listOfUpdate :: Integer -> String -> IO String
+listOfUpdate n thing = penau "pf-list-of/2" [show n, thing]
+
 -- How to modify a function to get it to do it differently?
 -- listOf 5 "worst American football teams"
 newListOf :: Integer -> String -> IO String
