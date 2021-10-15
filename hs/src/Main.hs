@@ -31,9 +31,23 @@ testFacts = do
 factQuery :: String -> IO String
 factQuery = readProcess "/home/shane/scripts/myeval" ["pena", "pf-get-a-factual-result-given-a-question/1"]
 
+penl :: IO String
+penl = readProcess "/home/shane/scripts/myeval" ["unbuffer", "penl"] ""
+
+penh :: String -> IO String
+penh funName = readProcess "/home/shane/scripts/myeval" ["unbuffer", "penh", funName] ""
+
+pena :: String -> [String] -> IO String
+pena funName args = readProcess "/home/shane/scripts/myeval" (["unbuffer", "pena", funName] ++ args) ""
+
 -- Have an list replicate
 listOf :: Integer -> String -> IO String
 listOf n = readProcess "/home/shane/scripts/myeval" ["pena", "pf-list-of/2", show n]
+
+-- How to modify a function to get it to do it differently?
+-- listOf 5 "worst American football teams"
+newListOf :: Integer -> String -> IO String
+newListOf n = readProcess "/home/shane/scripts/myeval" ["pena", "-u", "pf-list-of/2", show n]
 
 transpile :: String -> String -> String -> IO String
 transpile program fromLanguage toLanguage = readProcess "/home/shane/scripts/myeval" ["pena", "pf-transpile/3", fromLanguage, toLanguage] program
