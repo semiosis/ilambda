@@ -37,6 +37,7 @@ penl = readProcess "/home/shane/scripts/myeval" ["unbuffer", "penl"] ""
 penh :: String -> IO String
 penh funName = readProcess "/home/shane/scripts/myeval" ["unbuffer", "penh", funName] ""
 
+-- pena "pf-define-word-for-glossary/1" ["code"]
 pena :: String -> [String] -> IO String
 pena funName args = readProcess "/home/shane/scripts/myeval" (["unbuffer", "pena", funName] ++ args) ""
 
