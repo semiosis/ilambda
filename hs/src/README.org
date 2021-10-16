@@ -1,4 +1,6 @@
 * This sounds great for LM generations
+https://www.schoolofhaskell.com/school/starting-with-haskell/basics-of-haskell/13-the-list-monad
+
 #+BEGIN_SRC text -n :async :results verbatim code
   non-deterministic computation
       The kind of computation that, instead of
