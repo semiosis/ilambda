@@ -51,6 +51,7 @@ listOf n thing = pena "pf-list-of/2" [show n, thing]
 listOfUpdate :: Integer -> String -> IO String
 listOfUpdate n thing = penau "pf-list-of/2" [show n, thing]
 
+-- I need a class to ascribe a listOf call result to some kind of class which updates
 testListOf :: IO ()
 testListOf = do
    print(2 :: Int)
