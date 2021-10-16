@@ -51,6 +51,11 @@ listOf n thing = pena "pf-list-of/2" [show n, thing]
 listOfUpdate :: Integer -> String -> IO String
 listOfUpdate n thing = penau "pf-list-of/2" [show n, thing]
 
+testListOf :: IO ()
+testListOf = do
+   print(2 :: Int)
+   print(2 :: Float)
+
 -- How to modify a function to get it to do it differently?
 -- listOf 5 "worst American football teams"
 newListOf :: Integer -> String -> IO String
