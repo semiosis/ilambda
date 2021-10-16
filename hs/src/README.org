@@ -8,4 +8,13 @@ https://www.schoolofhaskell.com/school/starting-with-haskell/basics-of-haskell/1
       many.
   
       https://www.schoolofhaskell.com/school/starting-with-haskell/basics-of-haskell/13-the-list-monad  
+  
+      A computation returning a non-
+      deterministic result of type a is not a
+      pure function, but it can be made into one
+      by transforming its result type from a to
+      a list of a.
+      
+      In essence, we create a function that
+      returns all possible results at once.
 #+END_SRC
