@@ -11,6 +11,11 @@ import Control.Monad ( forM_ )
 import Test.HUnit
 -- assertBool (Just 12 == Nothing) "HUnit expects the result of the Boolean expression"
 
+
+-- TODO Use the List monad
+-- https://www.schoolofhaskell.com/school/starting-with-haskell/basics-of-haskell/13-the-list-monad
+
+
 -- TOOD Do some truth comparisons
 -- Make this return a Bool
 -- Even better, make it return True, False or Unknown
@@ -43,6 +48,8 @@ pena funName args = readProcess "/home/shane/scripts/myeval" (["unbuffer", "pena
 
 penau :: String -> [String] -> IO String
 penau funName args = readProcess "/home/shane/scripts/myeval" (["unbuffer", "pena", "-u", funName] ++ args) ""
+
+- TODO Try the Reader monad to manage state
 
 -- Have an list replicate
 listOf :: Integer -> String -> IO String

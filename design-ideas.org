@@ -1,0 +1,2 @@
+- Reversibility of functions
+  - Inputs from outputs
