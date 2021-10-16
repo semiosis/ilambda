@@ -1,0 +1,9 @@
+* This sounds great for LM generations
+#+BEGIN_SRC text -n :async :results verbatim code
+  non-deterministic computation
+      The kind of computation that, instead of
+      producing a single result, might produce
+      many.
+  
+      https://www.schoolofhaskell.com/school/starting-with-haskell/basics-of-haskell/13-the-list-monad  
+#+END_SRC
