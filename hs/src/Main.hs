@@ -1,4 +1,4 @@
-2{-# OPTIONS_GHC -Wno-deferred-type-errors #-}
+{-# OPTIONS_GHC -Wno-deferred-type-errors #-}
 {-# LANGUAGE OverloadedStrings #-}
 
 import System.Process ( readProcess )
