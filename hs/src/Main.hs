@@ -25,6 +25,7 @@ import Test.HUnit
 -- selects for the lowest probability tokens to
 -- find the most surprising results. This might be useful for generating interesting content.
 -- https://towardsdatascience.com/the-power-of-constrained-language-models-cf63b65a035d
+-- Come up with a novel function for beam search. The article used numpy, which is not very nice
 
 -- TOOD Do some truth comparisons
 -- Make this return a Bool
