@@ -15,6 +15,8 @@ import Test.HUnit
 -- TODO Use the List monad
 -- https://www.schoolofhaskell.com/school/starting-with-haskell/basics-of-haskell/13-the-list-monad
 
+-- j:pen-obtain-probabilities
+
 -- TODO Add beam search -- this would increase
 -- the coherence and plausibility of the results
 -- (minimise the surprisal) with respect to the
