@@ -15,8 +15,13 @@ import Test.HUnit
 -- TODO Use the List monad
 -- https://www.schoolofhaskell.com/school/starting-with-haskell/basics-of-haskell/13-the-list-monad
 
--- TODO Add beam search -- this would increase the coherence and plausibility of the results (minimise the surprisal) with respect to the training data
--- Could also do an anti-beam search, which selects for the lowest probability tokens to find the most surprising results
+-- TODO Add beam search -- this would increase
+-- the coherence and plausibility of the results
+-- (minimise the surprisal) with respect to the
+-- training data.
+-- Could also do an anti-beam search, which
+-- selects for the lowest probability tokens to
+-- find the most surprising results. This might be useful for generating interesting content.
 -- https://towardsdatascience.com/the-power-of-constrained-language-models-cf63b65a035d
 
 -- TOOD Do some truth comparisons
