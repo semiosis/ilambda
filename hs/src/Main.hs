@@ -1,4 +1,4 @@
-{-# OPTIONS_GHC -Wno-deferred-type-errors #-}
+2{-# OPTIONS_GHC -Wno-deferred-type-errors #-}
 {-# LANGUAGE OverloadedStrings #-}
 
 import System.Process ( readProcess )
@@ -15,6 +15,8 @@ import Test.HUnit
 -- TODO Use the List monad
 -- https://www.schoolofhaskell.com/school/starting-with-haskell/basics-of-haskell/13-the-list-monad
 
+-- TODO Add beam search
+-- https://towardsdatascience.com/the-power-of-constrained-language-models-cf63b65a035d
 
 -- TOOD Do some truth comparisons
 -- Make this return a Bool
