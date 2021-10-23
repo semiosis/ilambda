@@ -15,7 +15,7 @@ import Test.HUnit
 -- TODO Use the List monad
 -- https://www.schoolofhaskell.com/school/starting-with-haskell/basics-of-haskell/13-the-list-monad
 
--- TODO Add beam search
+-- TODO Add beam search -- this would increase the coherence and plausibility of the results (minimise the surprisal) with respect
 -- https://towardsdatascience.com/the-power-of-constrained-language-models-cf63b65a035d
 
 -- TOOD Do some truth comparisons
