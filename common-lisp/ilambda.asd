@@ -1,4 +1,4 @@
-(defsystem "common-lisp"
+(defsystem "ilambda"
   :version "0.1.0"
   :author ""
   :license ""
@@ -7,15 +7,15 @@
                 :components
                 ((:file "main"))))
   :description ""
-  :in-order-to ((test-op (test-op "common-lisp/tests"))))
+  :in-order-to ((test-op (test-op "ilambda/tests"))))
 
-(defsystem "common-lisp/tests"
+(defsystem "ilambda/tests"
   :author ""
   :license ""
-  :depends-on ("common-lisp"
+  :depends-on ("ilambda"
                "rove")
   :components ((:module "tests"
                 :components
                 ((:file "main"))))
-  :description "Test system for common-lisp"
+  :description "Test system for ilambda"
   :perform (test-op (op c) (symbol-call :rove :run c)))

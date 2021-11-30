@@ -1,10 +1,10 @@
-(defpackage common-lisp/tests/main
+(defpackage ilambda/tests/main
   (:use :cl
-        :common-lisp
+        :ilambda
         :rove))
-(in-package :common-lisp/tests/main)
+(in-package :ilambda/tests/main)
 
-;; NOTE: To run this test file, execute `(asdf:test-system :common-lisp)' in your Lisp.
+;; NOTE: To run this test file, execute `(asdf:test-system :ilambda)' in your Lisp.
 
 (deftest test-target-1
   (testing "should (= 1 1) to be true"

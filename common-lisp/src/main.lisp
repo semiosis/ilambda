@@ -1,5 +1,5 @@
-(defpackage common-lisp
+(defpackage ilambda
   (:use :cl))
-(in-package :common-lisp)
+(in-package :ilambda)
 
 ;; blah blah blah.
