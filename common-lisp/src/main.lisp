@@ -2,4 +2,6 @@
   (:use :cl))
 (in-package :ilambda)
 
-;; blah blah blah.
+(defun main ()
+  (format t "Hello, world.~%"))
+(main)
