@@ -10,4 +10,10 @@
 ;; I have to concentrate on languages which work well with Codex.
 ;; Though, perhaps this is an opportunity to build ilambda for Common Lisp.
 
+
+;; TODO First, implement pen client
+
+
+;; TODO Second, implement ilambda thin client
+
 (main)
