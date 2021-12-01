@@ -7,7 +7,7 @@
 ;; /home/shane/var/smulliga/source/git/semiosis/pen.el/src/ilambda.el
 
 (defn chomp [str]
-  (replace (re-matcher "\n\\'") "" str))
+  (replace (re-matcher "\n\\'" str) ""))
 
 (defn foo "I don't do a whole lot."
   [x]
