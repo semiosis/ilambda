@@ -10,7 +10,6 @@
 ;; I have to concentrate on languages which work well with Codex.
 ;; Though, perhaps this is an opportunity to build ilambda for Common Lisp.
 
-
 ;; TODO First, implement pen client
 ;; /home/shane/var/smulliga/source/git/semiosis/pen.el/src/pen-client.el
 
