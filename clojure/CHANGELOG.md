@@ -1,20 +1,24 @@
-# Changelog
-
-All notable changes to this project will be documented in this file.
-
-The format is based on [Keep a Changelog](http://keepachangelog.com)
-and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
-
+# Change Log
+All notable changes to this project will be documented in this file. This change log follows the conventions of [keepachangelog.com](http://keepachangelog.com/).
 
 ## [Unreleased]
-### Added
-- _CHANGELOG.md_ created.
 ### Changed
-- Something has been changed.
-### Fixed
-- Something has been fixed.
+- Add a new arity to `make-widget-async` to provide a different widget shape.
+
+## [0.1.1] - 2021-12-02
+### Changed
+- Documentation on how to make the widgets.
+
 ### Removed
-- Something has been removed.
+- `make-widget-sync` - we're all async, all the time.
 
+### Fixed
+- Fixed widget maker to keep working when daylight savings switches over.
 
-[Unreleased]: https://github.com/semiosis/ilambda-clj/compare/0.0.0...HEAD
+## 0.1.0 - 2021-12-02
+### Added
+- Files from the new template.
+- Widget maker public API - `make-widget-sync`.
+
+[Unreleased]: https://github.com/your-name/ilambda-clj/compare/0.1.1...HEAD
+[0.1.1]: https://github.com/your-name/ilambda-clj/compare/0.1.0...0.1.1
