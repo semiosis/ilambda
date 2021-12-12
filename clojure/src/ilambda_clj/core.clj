@@ -24,6 +24,7 @@
 (defn pen-eval-string [string]
   (eval (read-string (format "(do %s)" string))))
 
+;; TODO Implement the client before ilambda. I need the prompt functions
 ;; TODO Start with calling pen-fn-imagine-evaluating-emacs-lisp/2 from clojure
 ;; TODO Then implement ieval/m
 ;; TODO Then implement ilambda/name
