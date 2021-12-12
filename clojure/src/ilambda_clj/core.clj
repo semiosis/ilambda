@@ -1,10 +1,10 @@
 (ns ilambda-clj.core)
 
 ;; TODO First, implement pen client
-;; /home/shane/var/smulliga/source/git/semiosis/pen.el/src/pen-client.el
+;; e:$MYGIT/semiosis/pen.el/src/pen-client.el
 
 ;; TODO Second, implement ilambda thin client
-;; /home/shane/var/smulliga/source/git/semiosis/pen.el/src/ilambda.el
+;; e:$MYGIT/semiosis/pen.el/src/ilambda.el
 
 ;; variadic function clojure
 
@@ -23,3 +23,9 @@
 
 (defn pen-eval-string [string]
   (eval (read-string (format "(do %s)" string))))
+
+;; TODO Start with calling pen-fn-imagine-evaluating-emacs-lisp/2 from clojure
+;; TODO Then implement ieval/m
+;; TODO Then implement ilambda/name
+;; TODO Then implement ilambda
+;; TODO Then implement idefun/name

@@ -1,0 +1,1 @@
+["^ ","~$whitespace-or-comment?",["^ ","~:row",102,"~:col",1,"~:fixed-arities",["~#set",[1]],"~:name","^0","~:ns","~$rewrite-clj.node","~:top-ns","^7"],"~$value",["^ ","^1",110,"^2",1,"~:deprecated","0.4.0","^3",["^4",[1]],"^5","^9","^6","^7","^8","^7"],"~:filename","/home/shane/.m2/repository/rewrite-clj/rewrite-clj/0.5.2/rewrite-clj-0.5.2.jar:rewrite_clj/node.clj"]
