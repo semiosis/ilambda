@@ -13,27 +13,27 @@ import Test.HUnit
 
 
 
-data List a = Nil | Cons a (List a) deriving Show
+data Ilist a = Nil | Cons a (Ilist a) deriving Show
 
-append :: List a -> List a -> List a
+append :: Ilist a -> Ilist a -> Ilist a
 append Nil ys = ys
 append (Cons x xs) ys = Cons x (append xs ys)
 
-instance Functor List where
-    -- fmap :: (a -> b) -> List a -> List b
+instance Functor Ilist where
+    -- fmap :: (a -> b) -> Ilist a -> Ilist b
     fmap _ Nil = Nil
     fmap f (Cons x xs) = Cons (f x) (fmap f xs)
 
-instance Applicative List where
-    -- pure :: a -> List a
+instance Applicative Ilist where
+    -- pure :: a -> Ilist a
     pure x = Cons x Nil
 
-    -- (<*>) :: List (a -> b) -> List a -> List b
+    -- (<*>) :: Ilist (a -> b) -> Ilist a -> Ilist b
     Nil <*> _ = Nil
     (Cons g gs) <*> xs = fmap g xs `append` (gs <*> xs)
 
-instance Monad List where
-    -- (>>=) :: List a -> (a -> List b) -> List b
+instance Monad Ilist where
+    -- (>>=) :: Ilist a -> (a -> Ilist b) -> Ilist b
     Nil >>= _ = Nil
     (Cons x xs) >>= f = (f x) `append` (xs >>= f)
 
@@ -87,7 +87,7 @@ pena funName args = readProcess "/home/shane/scripts/myeval" (["unbuffer", "pena
 penau :: String -> [String] -> IO String
 penau funName args = readProcess "/home/shane/scripts/myeval" (["unbuffer", "pena", "-u", funName] ++ args) ""
 
-- TODO Try the Reader monad to manage state
+-- TODO Try the Reader monad to manage state
 
 -- Have an list replicate
 listOf :: Integer -> String -> IO String
