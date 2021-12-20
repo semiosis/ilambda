@@ -12,6 +12,33 @@ import Test.HUnit
 -- assertBool (Just 12 == Nothing) "HUnit expects the result of the Boolean expression"
 
 
+
+data List a = Nil | Cons a (List a) deriving Show
+
+append :: List a -> List a -> List a
+append Nil ys = ys
+append (Cons x xs) ys = Cons x (append xs ys)
+
+instance Functor List where
+    -- fmap :: (a -> b) -> List a -> List b
+    fmap _ Nil = Nil
+    fmap f (Cons x xs) = Cons (f x) (fmap f xs)
+
+instance Applicative List where
+    -- pure :: a -> List a
+    pure x = Cons x Nil
+
+    -- (<*>) :: List (a -> b) -> List a -> List b
+    Nil <*> _ = Nil
+    (Cons g gs) <*> xs = fmap g xs `append` (gs <*> xs)
+
+instance Monad List where
+    -- (>>=) :: List a -> (a -> List b) -> List b
+    Nil >>= _ = Nil
+    (Cons x xs) >>= f = (f x) `append` (xs >>= f)
+
+
+
 -- TODO Use the List monad
 -- https://www.schoolofhaskell.com/school/starting-with-haskell/basics-of-haskell/13-the-list-monad
 
