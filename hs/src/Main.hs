@@ -13,6 +13,7 @@ import Test.HUnit
 
 
 
+-- I want to create an imaginary list
 data Ilist a = Nil | Cons a (Ilist a) deriving Show
 
 append :: Ilist a -> Ilist a -> Ilist a
