@@ -5,3 +5,5 @@
 
 - basic prompting
   - I need streaming(lazy) prompting in a haskell prompting engine
+    - That would be useful here:
+      - /root/.emacs.d/host/prompts/prompts/generate-wiki-blurb-for-a-person-1.prompt
