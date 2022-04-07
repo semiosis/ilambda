@@ -12,6 +12,9 @@ import Test.HUnit
 -- assertBool (Just 12 == Nothing) "HUnit expects the result of the Boolean expression"
 
 
+-- Remember to use field labels
+-- sp +/"data Point = Pt {pointx, pointy :: Float}" "$HOME/glossaries/haskell.txt"
+
 
 -- I want to create an imaginary list
 data Ilist a = Nil | Cons a (Ilist a) deriving Show
